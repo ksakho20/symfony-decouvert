@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+{# <h1>Page d'accueil</h1> #}
+    
+<h1 class="text-center text-muted mb-2 mt-2">Contactez moi</h1>
+<div class="row">
+    <div class="col-md-5 mx-auto">
+
+
+{{ form_start(formulaire) }}
+<div class="row">
+    <div class="col-md-4">
+        {{ form_row(formulaire.nom) }}
+    </div>
+    <div class="col-md-4">
+        {{ form_row(formulaire.prenom) }}
+    </div>
+    <div class="col-md-4">
+        {{ form_row(formulaire.email) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        {{ form_row(formulaire.sujet) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(formulaire.message) }}
+    </div>
+</div>
+<div class="row">
+    {{ form_row(formulaire.submit) }}
+</div>
+
+{{ form_end(formulaire) }}
+
+
+</div>
+</div>
+
+{% endblock %}
